@@ -1,5 +1,6 @@
 package com.example.premier_zone.player;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -9,34 +10,46 @@ import jakarta.persistence.Table;
 public class Player {
 
     @Id
+    @Column(name = "player_name")
     private String name;
 
     private String nation;
 
+    @Column(name = "position")
     private String pos;
 
     private Integer age;
 
+    @Column(name = "matches_played")
     private Integer mp;
 
     private Integer starts;
 
+    @Column(name = "minutes_played")
     private Double min;
 
+    @Column(name = "goals")
     private Double gls;
 
+    @Column(name = "assists")
     private Double ast;
 
+    @Column(name = "penalties_scored")
     private Double pk;
 
+    @Column(name = "yellow_cards")
     private Double crdy;
 
+    @Column(name = "red_cards")
     private Double crdr;
 
+    @Column(name = "expected_goals")
     private Double xg;
 
+    @Column(name = "expected_assists")
     private Double xa;
 
+    @Column(name = "team_name")
     private String team;
 
     public Player() {
